@@ -227,7 +227,7 @@ static async Task UploadData(HttpContext ctx)
 ```csharp
 static async Task DownloadChunkedFile(HttpContext ctx)
 {
-  using (FileStream fs = new FileStream("./img/watson.jpg", , FileMode.Open, FileAccess.Read))
+  using (FileStream fs = new FileStream("./img/watson.jpg", FileMode.Open, FileAccess.Read))
   {
     ctx.Response.StatusCode = 200;
     ctx.Response.ChunkedTransfer = true;
